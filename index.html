@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmzy — Source Farm Produce Direct From Farmers Across Nigeria</title>
+<meta name="description" content="Farmzy connects restaurants, hotels, processors, retailers & exporters directly to verified farmers nationwide. Escrow-protected transactions. Free to join.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        farm: {
+          green: '#1B7A2E',
+          dark: '#0F4A1C',
+          deep: '#0B3A16',
+          light: '#E8F5EA',
+          lime: '#7DC242',
+          amber: '#F5A623'
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Sora', 'Inter', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  .font-display { font-family: 'Sora', 'Inter', sans-serif; }
+  .pattern {
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(125,194,66,.08) 0, transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(245,166,35,.08) 0, transparent 40%);
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details[open] .faq-icon { transform: rotate(45deg); }
+  .faq-icon { transition: transform .2s ease; }
+</style>
+</head>
+<body class="text-slate-800 bg-white antialiased">
+
+<!-- ============ NAVBAR ============ -->
+<header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <img src="assets/farmzy-logo-name.png" alt="Farmzy" class="h-8 w-auto">
+    <a href="https://play.google.com/store/apps/details?id=ng.com.farmzy.twa"
+       class="bg-farm-green hover:bg-farm-dark text-white font-semibold text-sm px-5 py-2.5 rounded-full transition shadow-sm hover:shadow-md">
+      Download App Now
+    </a>
+  </div>
+</header>
+
+<!-- ============ 1. HERO: HEADLINE + VALUE PROP ============ -->
+<section class="pattern pt-28 pb-16 sm:pt-32 sm:pb-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 bg-farm-light text-farm-dark text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+        <span class="w-2 h-2 rounded-full bg-farm-lime animate-pulse"></span>
+        Trusted by bulk buyers & exporters across Nigeria
+      </div>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-farm-deep">
+        Never Chase a Middleman for
+        <span class="text-farm-green">Farm Produce</span> Again.
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl">
+        Farmzy is Nigeria's agricultural peer-to-peer marketplace — browse live listings from verified farmers nationwide,
+        plan procurement with real quantities and availability dates, and pay safely through escrow.
+        <strong class="text-slate-800">Free to register. Verified supply. Zero supply-chain guesswork.</strong>
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="https://play.google.com/store/apps/details?id=ng.com.farmzy.twa"
+           class="inline-flex justify-center items-center gap-2 bg-farm-green hover:bg-farm-dark text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-farm-green/25 transition hover:-translate-y-0.5">
+          Download App Now — It's Free
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M18 12H6"/></svg>
+        </a>
+        <a href="#how"
+           class="inline-flex justify-center items-center gap-2 border-2 border-farm-green text-farm-green hover:bg-farm-light font-bold text-lg px-8 py-4 rounded-xl transition">
+          See How It Works
+        </a>
+      </div>
+      <!-- Social proof strip -->
+      <div class="mt-10 flex flex-wrap items-center gap-6 text-sm text-slate-600">
+        <div class="flex items-center gap-2">
+          <div class="flex -space-x-2">
+            <span class="w-8 h-8 rounded-full bg-farm-green text-white flex items-center justify-center font-bold text-xs">B</span>
+            <span class="w-8 h-8 rounded-full bg-farm-amber text-white flex items-center justify-center font-bold text-xs">D</span>
+            <span class="w-8 h-8 rounded-full bg-farm-dark text-white flex items-center justify-center font-bold text-xs">U</span>
+          </div>
+          <span><strong class="text-slate-800">5,000+</strong> downloads</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="text-farm-amber text-lg">★★★★★</span>
+          <span><strong class="text-slate-800">4.4★</strong> on Google Play</span>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="absolute -inset-4 bg-gradient-to-tr from-farm-lime/20 to-farm-amber/20 rounded-3xl blur-2xl"></div>
+      <div class="relative max-w-sm mx-auto">
+        <div class="rounded-[2.5rem] border-[10px] border-farm-deep shadow-2xl overflow-hidden bg-white">
+          <img src="assets/farmzy-app-screenshot.jpg" alt="Farmzy app — live marketplace listings with prices, quantities and locations"
+               class="w-full object-cover">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. PAIN POINTS (EMPATHY) ============ -->
+<section class="bg-farm-deep text-white py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-farm-amber font-semibold tracking-wide uppercase text-sm text-center">Sound familiar?</p>
+    <h2 class="font-display text-3xl sm:text-4xl font-bold text-center mt-3">
+      Sourcing produce in Nigeria shouldn't feel like a daily gamble.
+    </h2>
+    <p class="text-center text-slate-300 mt-4 max-w-2xl mx-auto">
+      If you run a restaurant, hotel, processing plant, retail chain or export business, you already know the pain:
+    </p>
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+        <div class="text-3xl mb-3">📞</div>
+        <h3 class="font-bold text-lg">Middlemen Inflate Prices</h3>
+        <p class="text-slate-300 text-sm mt-2">Every agent between you and the farm adds a cut — eating directly into your margins.</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+        <div class="text-3xl mb-3">🚫</div>
+        <h3 class="font-bold text-lg">Zero Visibility on Supply</h3>
+        <p class="text-slate-300 text-sm mt-2">You can't plan procurement when you don't know what farmers have, in what quantity, or when it's ready.</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+        <div class="text-3xl mb-3">💸</div>
+        <h3 class="font-bold text-lg">Paying for What Never Arrives</h3>
+        <p class="text-slate-300 text-sm mt-2">Sending money upfront to unverified suppliers is one of the riskiest moves in Nigerian agro-trade.</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+        <div class="text-3xl mb-3">🇳🇬</div>
+        <h3 class="font-bold text-lg">One Region, One Harvest</h3>
+        <p class="text-slate-300 text-sm mt-2">Your local network limits you. The best prices and volumes live in farming belts you've never reached.</p>
+      </div>
+    </div>
+    <p class="text-center text-lg text-slate-200 mt-10">
+      <strong class="text-farm-amber">The root cause is the same every time:</strong> no direct access to a nationwide network of farmers.
+    </p>
+  </div>
+</section>
+
+<!-- ============ 3. THE OFFER & TRANSFORMATION ============ -->
+<section class="py-16 sm:py-24" id="how">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="text-farm-green font-semibold tracking-wide uppercase text-sm">Introducing Farmzy</p>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-farm-deep mt-3">
+        One marketplace. Thousands of farmers. Your entire supply chain, in your pocket.
+      </h2>
+      <p class="text-slate-600 text-lg mt-5 leading-relaxed">
+        Farmzy connects you <strong>directly to farmers across Nigeria</strong>. Browse their listings — crops for sale, quantities,
+        and availability dates — and plan your procurement with confidence instead of guesswork. Then transact through
+        escrow so your money is protected from deposit to delivery.
+      </p>
+    </div>
+
+    <!-- Transformation: Before / After -->
+    <div class="mt-14 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7">
+        <span class="inline-block text-xs font-bold uppercase tracking-wide bg-red-100 text-red-700 px-3 py-1 rounded-full">Life before Farmzy</span>
+        <ul class="mt-5 space-y-3 text-slate-600 text-[15px]">
+          <li class="flex gap-3"><span class="text-red-500 font-bold">✕</span> Haggling with agents who quote whatever price they like</li>
+          <li class="flex gap-3"><span class="text-red-500 font-bold">✕</span> Surprise stock-outs that disrupt your kitchen, shelves or production line</li>
+          <li class="flex gap-3"><span class="text-red-500 font-bold">✕</span> Wiring deposits and praying the goods actually show up</li>
+          <li class="flex gap-3"><span class="text-red-500 font-bold">✕</span> Overpaying because your sourcing options stop at your city limits</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border-2 border-farm-green bg-farm-light p-7 shadow-xl shadow-farm-green/10">
+        <span class="inline-block text-xs font-bold uppercase tracking-wide bg-farm-green text-white px-3 py-1 rounded-full">Life with Farmzy</span>
+        <ul class="mt-5 space-y-3 text-farm-deep text-[15px]">
+          <li class="flex gap-3"><span class="text-farm-green font-bold">✓</span> Direct prices from farmers themselves — no middleman markup</li>
+          <li class="flex gap-3"><span class="text-farm-green font-bold">✓</span> Plan weeks ahead with quantities &amp; availability dates on every listing</li>
+          <li class="flex gap-3"><span class="text-farm-green font-bold">✓</span> Pay a deposit, confirm delivery, then release the balance — all in escrow</li>
+          <li class="flex gap-3"><span class="text-farm-green font-bold">✓</span> Source from farming belts nationwide without leaving your desk</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="https://play.google.com/store/apps/details?id=ng.com.farmzy.twa"
+         class="inline-flex items-center gap-2 bg-farm-green hover:bg-farm-dark text-white font-bold text-lg px-10 py-4 rounded-xl shadow-lg shadow-farm-green/25 transition hover:-translate-y-0.5">
+        Download App Now
+      </a>
+      <p class="text-sm text-slate-500 mt-3">Registration is 100% free. No card required.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. FEATURES & BENEFITS ============ -->
+<section class="py-16 sm:py-24 bg-slate-50 border-y border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="text-farm-green font-semibold tracking-wide uppercase text-sm">Everything you need to source with confidence</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-farm-deep mt-3">Built for serious bulk buyers</h2>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
+        <div class="w-12 h-12 rounded-xl bg-farm-light flex items-center justify-center text-2xl mb-4">🌾</div>
+        <h3 class="font-display font-bold text-xl text-farm-deep">Comprehensive Farm Produce Marketplace</h3>
+        <p class="text-slate-600 text-sm mt-2 leading-relaxed">Browse a nationwide catalogue of live farmer listings — crop type, available quantity, and harvest/availability dates — so you can line up supply for your restaurant, hotel, retail chain or processing plant weeks in advance.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
+        <div class="w-12 h-12 rounded-xl bg-farm-light flex items-center justify-center text-2xl mb-4">🛡️</div>
+        <h3 class="font-display font-bold text-xl text-farm-deep">Escrow-Protected Transactions</h3>
+        <p class="text-slate-600 text-sm mt-2 leading-relaxed">Pay your deposit into escrow. The farmer ships. You inspect and confirm delivery — only then is the balance released to the farmer. No more paying for produce that never arrives.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
+        <div class="w-12 h-12 rounded-xl bg-farm-light flex items-center justify-center text-2xl mb-4">🤝</div>
+        <h3 class="font-display font-bold text-xl text-farm-deep">Help a Farmer, Earn a Discount</h3>
+        <p class="text-slate-600 text-sm mt-2 leading-relaxed">Fund farm inputs — seeds, fertilizer, equipment — for a farmer on the platform and receive a discount on their produce in return. Lower cost for you, stronger supply for everyone.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
+        <div class="w-12 h-12 rounded-xl bg-farm-light flex items-center justify-center text-2xl mb-4">📞</div>
+        <h3 class="font-display font-bold text-xl text-farm-deep">Premium: Direct Farmer Contact</h3>
+        <p class="text-slate-600 text-sm mt-2 leading-relaxed">Upgrade to Premium and unlock farmer contact details, with the ability to call or WhatsApp-chat with farmers directly from the app. Negotiate faster, build relationships, lock in recurring supply.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
+        <div class="w-12 h-12 rounded-xl bg-farm-light flex items-center justify-center text-2xl mb-4">📅</div>
+        <h3 class="font-display font-bold text-xl text-farm-deep">Procurement Planning Built In</h3>
+        <p class="text-slate-600 text-sm mt-2 leading-relaxed">Availability dates on every listing mean your procurement team can forecast, budget and schedule deliveries in advance — no more last-minute scrambling or production downtime.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
+        <div class="w-12 h-12 rounded-xl bg-farm-light flex items-center justify-center text-2xl mb-4">🇳🇬</div>
+        <h3 class="font-display font-bold text-xl text-farm-deep">Nationwide Farmer Network</h3>
+        <p class="text-slate-600 text-sm mt-2 leading-relaxed">Break out of your local sourcing bubble. Compare prices and volumes across states, find the best deals, and diversify your supplier base for resilience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. SOCIAL PROOF ============ -->
+<section class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="text-farm-green font-semibold tracking-wide uppercase text-sm">Social proof</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-farm-deep mt-3">
+        5,000+ downloads. 4.4★ on Google Play. Real users. Real results.
+      </h2>
+      <p class="text-slate-600 text-lg mt-4">Farmzy isn't a pitch deck — it's a live marketplace already serving buyers and farmers across Nigeria.</p>
+    </div>
+
+    <div class="mt-12 grid lg:grid-cols-2 gap-8 items-stretch">
+      <!-- Proof screenshots -->
+      <div class="grid sm:grid-cols-2 gap-5">
+        <figure class="rounded-2xl border border-slate-200 overflow-hidden shadow-lg bg-white">
+          <img src="assets/farmzy-5k.png" alt="Farmzy on Google Play — 5,000+ downloads, 4.4 star rating" class="w-full h-full object-cover">
+          <figcaption class="text-xs text-slate-500 px-4 py-3 border-t border-slate-100">Farmzy on Google Play — 5K+ downloads &amp; 4.4★ average rating</figcaption>
+        </figure>
+        <figure class="rounded-2xl border border-slate-200 overflow-hidden shadow-lg bg-white">
+          <img src="assets/farmzy-reviews.png" alt="Farmzy Google Play reviews — five star ratings from verified users" class="w-full h-full object-cover">
+          <figcaption class="text-xs text-slate-500 px-4 py-3 border-t border-slate-100">Verified 5-star reviews from real users</figcaption>
+        </figure>
+      </div>
+      <!-- Testimonials -->
+      <div class="flex flex-col gap-5">
+        <blockquote class="bg-farm-light rounded-2xl p-6 border border-farm-green/10">
+          <div class="text-farm-amber text-lg">★★★★★</div>
+          <p class="text-farm-deep font-semibold text-lg mt-1">"It's Nice"</p>
+          <footer class="text-sm text-slate-500 mt-2">— babatope oluwoye · September 2026 · Verified Google Play review</footer>
+        </blockquote>
+        <blockquote class="bg-farm-light rounded-2xl p-6 border border-farm-green/10">
+          <div class="text-farm-amber text-lg">★★★★★</div>
+          <p class="text-farm-deep font-semibold text-lg mt-1">"Great"</p>
+          <footer class="text-sm text-slate-500 mt-2">— DAMIAN DAWA · October 2026 · Verified Google Play review</footer>
+        </blockquote>
+        <blockquote class="bg-farm-light rounded-2xl p-6 border border-farm-green/10">
+          <div class="text-farm-amber text-lg">★★★★★</div>
+          <p class="text-farm-deep font-semibold text-lg mt-1">"come and enjoy your money"</p>
+          <footer class="text-sm text-slate-500 mt-2">— UDUAk INYANG · September 2026 · Verified Google Play review</footer>
+        </blockquote>
+        <!-- Placeholder for your next case study -->
+        <div class="rounded-2xl border-2 border-dashed border-farm-green/30 p-6 text-center">
+          <p class="text-farm-green font-semibold text-sm">Your story could be next</p>
+          <p class="text-slate-500 text-sm mt-1">Join 5,000+ users already sourcing and selling on Farmzy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. RISK REVERSAL / GUARANTEE ============ -->
+<section class="py-16 sm:py-24 bg-farm-deep text-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="text-farm-amber font-semibold tracking-wide uppercase text-sm">Risk reversal</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold mt-3">Start free. Your money stays protected until you confirm delivery.</h2>
+      <p class="text-slate-300 mt-5 leading-relaxed">
+        Registration costs nothing. And because every Farmzy transaction runs through escrow, your deposit is held safely
+        until the produce lands in your hands and you confirm it. The farmer only gets paid when you're satisfied.
+      </p>
+      <p class="text-slate-300 mt-4 leading-relaxed">
+        If you go Premium, you can explore it for a full month for just <strong class="text-white">₦5,000</strong> — and if you commit for a year,
+        you save <strong class="text-farm-amber">30%</strong> instantly.
+      </p>
+      <a href="https://play.google.com/store/apps/details?id=ng.com.farmzy.twa"
+         class="mt-8 inline-flex items-center gap-2 bg-farm-amber hover:bg-amber-500 text-farm-deep font-bold text-lg px-10 py-4 rounded-xl shadow-lg shadow-farm-amber/20 transition hover:-translate-y-0.5">
+        Download App Now — Free
+      </a>
+    </div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+      <div class="text-4xl mb-4">🛡️</div>
+      <h3 class="font-display font-bold text-2xl">The Farmzy Buyer Protection Promise</h3>
+      <ul class="mt-5 space-y-3 text-slate-200 text-[15px]">
+        <li class="flex gap-3"><span class="text-farm-lime font-bold">1.</span> You pay your deposit — it's held in escrow, not sent to the farmer.</li>
+        <li class="flex gap-3"><span class="text-farm-lime font-bold">2.</span> The farmer delivers your produce as agreed.</li>
+        <li class="flex gap-3"><span class="text-farm-lime font-bold">3.</span> You inspect and confirm delivery in the app.</li>
+        <li class="flex gap-3"><span class="text-farm-lime font-bold">4.</span> Only then is the escrowed balance released to the farmer.</li>
+      </ul>
+      <div class="mt-6 pt-5 border-t border-white/10 text-sm text-slate-300">
+        Transparent pricing: <strong class="text-white">Free</strong> to register · <strong class="text-white">₦5,000/month</strong> Premium · <strong class="text-farm-amber">30% off</strong> on annual payment (₦42,000/year)
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. FAQ ============ -->
+<section class="py-16 sm:py-24">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <p class="text-farm-green font-semibold tracking-wide uppercase text-sm">FAQ</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-farm-deep mt-3">Questions? We've got answers.</h2>
+    </div>
+    <div class="mt-10 space-y-4">
+      <details class="group bg-white border border-slate-200 rounded-2xl px-6 py-5 shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-farm-deep">
+          Is it really free to join Farmzy?
+          <span class="faq-icon text-farm-green text-2xl leading-none font-light">+</span>
+        </summary>
+        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Yes. Registration is completely free and lets you browse the full nationwide marketplace, view listings with quantities and availability dates, and start transacting through escrow. The Premium plan (₦5,000/month) simply unlocks farmer contact details and in-app calling/WhatsApp chat.</p>
+      </details>
+      <details class="group bg-white border border-slate-200 rounded-2xl px-6 py-5 shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-farm-deep">
+          How does escrow protect me as a buyer?
+          <span class="faq-icon text-farm-green text-2xl leading-none font-light">+</span>
+        </summary>
+        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Your payment is held securely in escrow — not given directly to the farmer. When delivery arrives and you confirm it's as agreed, the balance is released to the farmer. If the produce doesn't show up or doesn't match the listing, your money stays protected.</p>
+      </details>
+      <details class="group bg-white border border-slate-200 rounded-2xl px-6 py-5 shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-farm-deep">
+          Who is Farmzy for?
+          <span class="faq-icon text-farm-green text-2xl leading-none font-light">+</span>
+        </summary>
+        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Any business that buys produce in bulk: restaurants and hotels, farm produce dealers and retailers, exporters, processors, and bulk buyers of any size who want direct access to farmers across Nigeria.</p>
+      </details>
+      <details class="group bg-white border border-slate-200 rounded-2xl px-6 py-5 shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-farm-deep">
+          What do I get with the Premium plan?
+          <span class="faq-icon text-farm-green text-2xl leading-none font-light">+</span>
+        </summary>
+        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Premium (₦5,000/month, or ₦42,000/year with 30% off) gives you farmer contact details plus the ability to call or WhatsApp-chat with farmers directly from the app — perfect for negotiating, building recurring supply relationships, and moving faster on deals.</p>
+      </details>
+      <details class="group bg-white border border-slate-200 rounded-2xl px-6 py-5 shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-farm-deep">
+          How does "Help a Farmer" work?
+          <span class="faq-icon text-farm-green text-2xl leading-none font-light">+</span>
+        </summary>
+        <p class="text-slate-600 text-sm mt-3 leading-relaxed">You can purchase farm inputs (seeds, fertilizer, and more) for a farmer on the platform. In return, you receive a discount on their produce — lowering your sourcing cost while strengthening the supply chain.</p>
+      </details>
+      <details class="group bg-white border border-slate-200 rounded-2xl px-6 py-5 shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-farm-deep">
+          Can I plan procurement ahead of time?
+          <span class="faq-icon text-farm-green text-2xl leading-none font-light">+</span>
+        </summary>
+        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Yes — that's one of Farmzy's biggest advantages. Every listing details the crops for sale, the quantities available, and the availability dates, so you can plan your procurement calendar weeks or months in advance.</p>
+      </details>
+      <details class="group bg-white border border-slate-200 rounded-2xl px-6 py-5 shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-farm-deep">
+          Where does Farmzy operate?
+          <span class="faq-icon text-farm-green text-2xl leading-none font-light">+</span>
+        </summary>
+        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Farmzy connects you to farmers across Nigeria — so whether you're sourcing grain from the North, tubers from the West, or vegetables from any region, the marketplace is nationwide.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. FINAL CTA ============ -->
+<section class="pattern py-20 sm:py-28">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <img src="assets/farmzy-logo.png" alt="Farmzy" class="h-20 w-20 mx-auto drop-shadow-lg">
+    <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-farm-deep mt-6 leading-tight">
+      Your next harvest is already listed.<br class="hidden sm:block">
+      Go get it.
+    </h2>
+    <p class="text-slate-600 text-lg mt-5 max-w-2xl mx-auto">
+      Join 5,000+ buyers and farmers on Nigeria's agricultural peer-to-peer marketplace.
+      Free to register, escrow-protected, nationwide reach.
+    </p>
+    <a href="https://play.google.com/store/apps/details?id=ng.com.farmzy.twa"
+       class="mt-9 inline-flex items-center gap-2 bg-farm-green hover:bg-farm-dark text-white font-extrabold text-xl px-12 py-5 rounded-2xl shadow-2xl shadow-farm-green/30 transition hover:-translate-y-1">
+      Download App Now
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M18 12H6"/></svg>
+    </a>
+    <p class="text-sm text-slate-500 mt-4">Free registration · Escrow-protected deals · 4.4★ on Google Play</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-farm-deep text-slate-400 py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <img src="assets/farmzy-logo-name.png" alt="Farmzy" class="h-7 w-auto brightness-0 invert">
+    <p class="text-sm">© 2026 Farmzy Agro Systems. Fresh from the farm, direct to your business.</p>
+    <a href="https://play.google.com/store/apps/details?id=ng.com.farmzy.twa" class="text-farm-amber font-semibold hover:text-amber-400 transition">Download App Now →</a>
+  </div>
+</footer>
+
+</body>
+</html>
